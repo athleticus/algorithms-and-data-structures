@@ -5,6 +5,7 @@ http://staff.itee.uq.edu.au/taoyf/course/comp3506/www/
 
 ## AVL Tree
 [avl.py](avl.py)
+
 Maps distinct, orderable keys to optional values.
 
 * Space: O(n)
