@@ -4,7 +4,8 @@ Implementations of Intermediate Algorithms & Data Structures, many of which are 
 http://staff.itee.uq.edu.au/taoyf/course/comp3506/www/
 
 ## AVL Tree
-Manages set of orderables (i.e. integers) with optional associated values.
+(avl.py)[avl.py]
+Maps distinct, orderable keys to optional values.
 
 * Space: O(n)
 * Time:
@@ -16,7 +17,9 @@ Manages set of orderables (i.e. integers) with optional associated values.
     - Iteration: O(n)
     - Copy: O(n)
 
-http://staff.itee.uq.edu.au/taoyf/course/comp3506/lec/bst.pdf
-http://staff.itee.uq.edu.au/taoyf/course/comp3506/lec/avl.pdf
+See
+* http://staff.itee.uq.edu.au/taoyf/course/comp3506/lec/bst.pdf
+* http://staff.itee.uq.edu.au/taoyf/course/comp3506/lec/avl.pdf
+* https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
 
 
