@@ -64,6 +64,7 @@ class PriorityQueue:
 
         :return: None
         """
+        print(self)
 
     def in_order_traversal(self):
         """
@@ -76,14 +77,14 @@ class PriorityQueue:
 
         traversal = []
 
-        # 1) Create an empty stack S.
+        # Create an empty stack.
         stack = []
 
-        # 2) Initialize current node as root
+        # 2) Set current node to root
         i = 0
         depth = 0
 
-        # 3) Push the current node to S and set current = current->left until current is NULL
+        # 3) Push the current node to stack and set current = current->left until current is NULL
         while True:
             while i < len(self._nodes):
                 stack.append((i, depth))
@@ -96,7 +97,7 @@ class PriorityQueue:
                 # a) Pop the top item from stack.
                 i, depth = stack.pop()
 
-                # b) Print the popped item, set current = popped_item->right
+                # b) Yield the popped item, set current = popped_item->right
                 yield self._nodes[i], depth
                 i = self.get_right_index(i)
                 depth += 1
