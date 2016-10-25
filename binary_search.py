@@ -24,11 +24,11 @@ def binary_search(key, keys):
 
 def binary_search_selector(key, items, selector=lambda item: item):
     """
-    Performs binary search.
+    Performs binary search, with optional key selector.
 
     :param key: Key to search for.
     :param items: Sorted iterable of items.
-    :param lambda: Returns key when applied to item.
+    :param selector: Returns key when applied to item.
     :return: An index of key, else -1 if not found.
     """
     left = 0
@@ -37,9 +37,11 @@ def binary_search_selector(key, items, selector=lambda item: item):
     while left != right:
         mid = (left + right) // 2
 
-        if items[mid] == key:
+        this_key = selector(items[mid])
+
+        if this_key == key:
             return mid
-        elif items[mid] > key:
+        elif this_key > key:
             right = mid - 1
         else:
             left = mid + 1
