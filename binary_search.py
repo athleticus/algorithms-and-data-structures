@@ -9,7 +9,7 @@ def binary_search(key, keys):
     left = 0
     right = len(keys) - 1
 
-    while True:
+    while left != right:
         mid = (left + right) // 2
 
         if keys[mid] == key:
@@ -34,7 +34,7 @@ def binary_search_selector(key, items, selector=lambda item: item):
     left = 0
     right = len(items) - 1
 
-    while True:
+    while left != right:
         mid = (left + right) // 2
 
         if items[mid] == key:
@@ -56,3 +56,8 @@ if __name__ == "__main__":
     nums.sort()
     index = binary_search(key, nums)
     print("{} exists at index {}".format(key, index))
+
+    haystack = [3,1,4,1,5,9,2,6,5,3]
+    needle = 0
+    index = binary_search(needle, haystack)
+    print("{} exists at index {} in {}".format(needle, index, haystack))
